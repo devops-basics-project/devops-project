@@ -21,7 +21,7 @@ pipeline {
         sh '''
         docker stop myapp || true
         docker rm myapp || true
-        docker run -d --name myapp -p 8080:80 $IMAGE_NAME:$IMAGE_TAG
+        docker run -d --name myapp -p 8060:80 $IMAGE_NAME:$IMAGE_TAG
         '''
       }
     }
